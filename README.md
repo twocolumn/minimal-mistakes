@@ -15,7 +15,7 @@ Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building per
 
 **Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
 
-Interested in testing out a [**pre-release "gemified" version**](https://github.com/mmistakes/minimal-mistakes/tree/feature/theme-gem) of the theme? Read this blog post to [learn now](https://mmistakes.github.io/minimal-mistakes/jekyll/gemified-theme-alpha/).
+Interested in testing out a [**pre-release "gemified" version**](https://github.com/mmistakes/minimal-mistakes/tree/feature/theme-gem) of the theme? Read this blog post to [learn how](https://mmistakes.github.io/minimal-mistakes/jekyll/gemified-theme-beta/).
 
 [![Minimal Mistakes live preview][2]][1]
 
