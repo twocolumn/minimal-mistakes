@@ -1,0 +1,18 @@
+{% if paginator.previous_page or paginator.next_page %}
+  <nav class="pagination">
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page | relative_url }}" class="pagination--pager" title="{{ paginator.next_page | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].posts_older | default: "Older posts" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].posts_older | default: "Older posts" }}</a>
+    {% endif %}
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <a href="{{ '/' | relative_url }}" class="pagination--pager" title="{{ paginator.next_page | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].posts_newer | default: "Newer posts" }}</a>
+      {% else %}
+        <a href="{{ paginator.previous_page | relative_url }}" class="pagination--pager" title="{{ paginator.next_page | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].posts_newer | default: "Newer posts" }}</a>
+      {% endif %}
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].posts_newer | default: "Newer posts" }}</a>
+    {% endif %}
+  </nav>
+{% endif %}

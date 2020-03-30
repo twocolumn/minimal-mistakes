@@ -1,0 +1,24 @@
+{% include group-by-array-space collection=site.posts field=include.field %}
+
+{% assign posts_max = 0 %}
+{% for name in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  {% if posts.size > posts_max %}
+    {% assign posts_max = posts.size %}
+  {% endif %}
+{% endfor %}
+
+<ul class="taxonomy__index">
+  {% for i in (1..posts_max) reversed %}
+    {% for name in group_names %}
+    {% assign posts = group_items[forloop.index0] %}
+      {% if posts.size == i %}
+        <li>
+          <a href="{{ name | slugify }}">
+            <strong>{{ name }}</strong> <span class="taxonomy__count">{{ i }}</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

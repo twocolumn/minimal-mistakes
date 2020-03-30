@@ -1,7 +1,19 @@
-{% if site.tag_archive.type and page.tags[0] %}
-  {% include tag-list.html %}
-{% endif %}
+  {% assign collection = post.categories %}
+  {% assign collection_label = site.data.ui-text[site.locale].categories_label | default: "Categories:" %}
+  {% include page__taxonomy-collection.html collection=collection collection_label=collection_label path='categories' fa='cat' %}
 
-{% if site.category_archive.type and page.categories[0] %}
-  {% include category-list.html %}
-{% endif %}
+  {% assign collection = post.tags %}
+  {% assign collection_label = site.data.ui-text[site.locale].tags_label | default: "Tags:" %}
+  {% include page__taxonomy-collection.html collection=collection collection_label=collection_label path='tags' fa='tags' %}
+
+  {% assign collection = post.langs | split: ' ' %}
+  {% assign collection_label = site.data.ui-text[site.locale].collection_label_langs | default: "Languages:" %}
+  {% include page__taxonomy-collection.html collection=collection collection_label=collection_label path='langs' fa='language' %}
+
+  {% assign collection = post.tools | split: ' ' %}
+  {% assign collection_label = site.data.ui-text[site.locale].collection_label_tools | default: "Tools:" %}
+  {% include page__taxonomy-collection.html collection=collection collection_label=collection_label path='tools' fa='tools' %}
+
+  {% assign collection = post.libs | split: ' ' %}
+  {% assign collection_label = site.data.ui-text[site.locale].collection_label_tools | default: "Libraries:" %}
+  {% include page__taxonomy-collection.html collection=collection collection_label=collection_label path='libs' fa='book' %}
