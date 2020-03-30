@@ -1,0 +1,17 @@
+---
+layout: page
+title: {{ page.category }}
+---
+<section id="{{ page.category | slugify | downcase }}" class="taxonomy__section">
+  <i>{{ page.content }}</i>
+
+  <h2>Artykuły</h2>
+  <div class="entries-{{ page.entries_layout | default: 'list' }}">
+    {% for post in site.posts %}
+      {% if post.category == page.category %}
+        {% include archive-single.html type=page.entries_layout %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+</section>
