@@ -4,8 +4,6 @@ title: {{ page.category }}
 ---
 <section id="{{ page.category | slugify | downcase }}" class="taxonomy__section">
   <i>{{ page.content }}</i>
-
-  <h2>Artykuły</h2>
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
       {% if post.category == page.category %}

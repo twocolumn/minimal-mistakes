@@ -3,7 +3,9 @@ layout: page
 title: {{ page.lang }}
 ---
 <section id="{{ page.lang | slugify | downcase }}" class="taxonomy__section">
-  <b>{{ page.title }}</b> - {{ page.description }}
+  {% if page.title and page.description %}
+    <b>{{ page.title }}</b> - {{ page.description }}
+  {% endif %}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
       {% assign langs = post.langs | split: ' ' %}
@@ -15,5 +17,7 @@ title: {{ page.lang }}
   <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
 </section>
 
-<h2> Linki zewnętrzne </h2>
-{{ page.content }}
+{% if page.content or page.content != "" %}
+  <h2> Linki zewnętrzne </h2>
+  {{ page.content }}
+{% endif %}

@@ -26,14 +26,9 @@ layout: default
     {% assign post = page %}
     {% include post.html %}
 
-    <footer id="article-footer">
-      {% if page.share %}
-        {% include social-share.html %}
-      {% endif %}
-      {% if site.comments.provider and page.comments %}
-        {% include comments.html %}
-      {% endif %}
-    </footer>
+    {% if site.comments.provider and page.comments %}
+      {% include comments.html %}
+    {% endif %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
