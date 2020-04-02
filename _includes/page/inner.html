@@ -1,0 +1,50 @@
+{% assign inner = include.inner %}
+<div class="page__inner-wrap">
+  {% unless inner.header.overlay_color or inner.header.overlay_image %}
+    <header>
+      {% if inner.title %}
+        <h1 id="inner-title" class="page__title" itemprop="headline">
+          {% if include.home %}
+            <a href="{{ inner.url | relative_url }}">
+              {{ inner.title | markdownify | remove: "<p>" | remove: "</p>" }}
+            </a>
+          {% else %}
+            {{ inner.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {% endif %}
+        </h1>
+      {% endif %}
+      {% if inner.read_time %}
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+    </header>
+  {% endunless %}
+
+  <section class="page__content" itemprop="text">
+    {% if inner.toc %}
+    <aside class="sidebar__right {% if inner.toc_sticky %}sticky{% endif %}">
+      <nav class="toc">
+        <header><h4 class="nav__title"><i class="fas fa-{{ inner.toc_icon | default: 'file-alt' }}"></i> {{ inner.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this inner" }}</h4></header>
+        {% include page/toc.html sanitize=true html=inner.content h_min=1 h_max=6 class="toc__menu" %}
+      </nav>
+    </aside>
+    {% endif %}
+    {{ inner.content }}
+    {% if inner.link %}<div><a href="{{ inner.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+  </section>
+
+  <footer class="page__meta">
+    {% if site.data.ui-text[site.locale].meta_label %}
+      <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+    {% endif %}
+    {% include page/page__taxonomy.html %}
+    {% if inner.last_modified_at %}
+      <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ inner.last_modified_at | date: "%Y-%m-%d" }}">{{ inner.last_modified_at | date: "%B %d, %Y" }}</time></p>
+    {% elsif inner.date %}
+      <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ inner.date | date_to_xmlschema }}">{{ inner.date | date: "%B %d, %Y" }}</time></p>
+    {% endif %}
+  </footer>
+
+  {% if page.share %}
+    {% include page/social-share.html %}
+  {% endif %}
+</div>
