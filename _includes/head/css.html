@@ -1,0 +1,16 @@
+{% comment %}
+{% capture critical %}
+  {% include head/critical.scss %}
+{% endcapture %}
+<style>
+  {{ critical | scssify }}
+</style>
+{% endcomment %}
+<style>
+  {% include head/critical.css %}
+</style>
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</noscript>
+<script defer src="{{ '/assets/js/loadCss.js' }}"></script>

@@ -1,12 +1,24 @@
 <div class="page__comments">
   {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+  {% capture comments_title %}{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}{% endcapture %}
   {% case site.comments.provider %}
     {% when "discourse" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="discourse-comments"></section>
     {% when "disqus" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
-      <section id="disqus_thread"></section>
+      <section id="disqus_thread">
+      </section>
+    {% when "disqus_loader" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="disqus_thread">
+        <button id="disqus_loader">{{ comments_title }}</button>
+      </section>
+    {% when "disqus_empty" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="disqus_thread">
+        <div id="disqus_empty"></div>
+      </section>
     {% when "facebook" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section class="fb-comments" data-href="{{ page.url | absolute_url }}" data-mobile="true" data-num-posts="{{ site.comments.facebook.num_posts | default: 5 }}" data-width="100%" data-colorscheme="{{ site.comments.facebook.colorscheme | default: 'light' }}"></section>
@@ -25,7 +37,7 @@
                 {% assign url = comment[1].url %}
                 {% assign date = comment[1].date %}
                 {% assign message = comment[1].message %}
-                {% include comment.html index=forloop.index email=email name=name url=url date=date message=message %}
+                {% include comments/comment.html index=forloop.index email=email name=name url=url date=date message=message %}
               {% endfor %}
             {% endif %}
           </div>
@@ -99,7 +111,7 @@
                 {% assign url = comment[1].url %}
                 {% assign date = comment[1].date %}
                 {% assign message = comment[1].message %}
-                {% include comment.html index=forloop.index email=email name=name url=url date=date message=message %}
+                {% include comments/comment.html index=forloop.index email=email name=name url=url date=date message=message %}
               {% endfor %}
             {% endif %}
           </div>
