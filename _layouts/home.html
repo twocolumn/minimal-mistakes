@@ -1,13 +1,37 @@
 ---
-layout: archive
+layout: default
+toc: true
+toc_sticky: true
+sitemap: false
 ---
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include header/page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include header/page__hero_video.html %}
+{% endif %}
 
-{{ content }}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include header/breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<div id="main" role="main">
+  {% include sidebar/sidebar.html %}
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+  {{ content }}
 
-{% include paginator.html %}
+  {% for post in paginator.posts %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    {% include home/paginator.html %}
+    {% if post.title %}<meta itemprop="headline" content="{{ post.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if post.excerpt %}<meta itemprop="description" content="{{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if post.date %}<meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">{% endif %}
+    {% if post.last_modified_at %}<meta itemprop="dateModified" content="{{ post.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    {% include page/inner.html inner=post home='home' %}
+    {% include home/footer.html %}
+  </article>
+  {% endfor %}
+
+</div>
