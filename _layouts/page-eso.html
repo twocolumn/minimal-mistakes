@@ -2,16 +2,3 @@
 layout: page
 title: {{ page.eso }}
 ---
-<section id="{{ page.eso | slugify | downcase }}" class="taxonomy__section">
-  {{ page.content }}
-  <div class="entries-{{ page.entries_layout | default: 'list' }}">
-    {% for post in site.posts %}
-      {% assign esos = post.eso | split: ' ' %}
-      {% if esos contains page.eso %}
-        {% include archive-single.html type=page.entries_layout %}
-      {% endif %}
-    {% endfor %}
-  </div>
-  <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-</section>
-
