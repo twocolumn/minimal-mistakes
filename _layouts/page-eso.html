@@ -2,7 +2,7 @@
 layout: page
 title: {{ page.eso }}
 ---
-<section id="{{ page.eso | slugify | downcase }}" class="taxonomy__section">
+<section id="{{ page.eso | downcase }}" class="taxonomy__section">
   {{ page.content }}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
