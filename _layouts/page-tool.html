@@ -9,8 +9,8 @@ title: {{ page.tool }}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
     {% assign tokens = post.tools | split: ' ' %}
-      {% if tools contains page.tool %}
-        {% tokens archive-single.html type=page.entries_layout %}
+      {% if tokens contains page.tool %}
+        {% include archive-single.html type=page.entries_layout %}
       {% endif %}
     {% endfor %}
   </div>
