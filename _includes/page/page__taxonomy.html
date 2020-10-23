@@ -2,28 +2,28 @@
 
   {% assign collection = inner.categories %}
   {% assign collection_label = site.data.ui-text[site.locale].categories_label | default: "Categories:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='categories' fa='cat' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='categories' fa='cat' style='s' %}
 
   {% assign collection = inner.tags %}
   {% assign collection_label = site.data.ui-text[site.locale].tags_label | default: "Tags:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='tags' fa='tags' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='tags' fa='tags' style='s' %}
 
   {% assign collection = inner.langs | split: ' ' %}
   {% assign collection_label = site.data.ui-text[site.locale].collection_label_langs | default: "Languages:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='langs' fa='language' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='langs' fa='language' style='s' %}
 
   {% assign collection = inner.tools | split: ' ' %}
   {% assign collection_label = site.data.ui-text[site.locale].collection_label_tools | default: "Tools:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='tools' fa='tools' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='tools' fa='tools' style='s' %}
 
   {% assign collection = inner.libs | split: ' ' %}
   {% assign collection_label = site.data.ui-text[site.locale].collection_label_libs | default: "Libraries:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='libs' fa='book' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='libs' fa='book' style='s' %}
 
   {% assign collection = inner.projects | split: ' ' %}
   {% assign collection_label = site.data.ui-text[site.locale].collection_label_projects | default: "Projects:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='projects' fa='project-diagram' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='projects' fa='project-diagram' style='s' %}
 
   {% assign collection = inner.eso | split: ' ' %}
   {% assign collection_label = site.data.ui-text[site.locale].collection_label_eso | default: "Eso:" %}
-  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='eso' fa='fort-awesome' %}
+  {% include page/page__taxonomy-collection.html collection=collection collection_label=collection_label path='eso' fa='fort-awesome' style='b' %}
