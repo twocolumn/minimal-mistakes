@@ -8,8 +8,8 @@ title: {{ page.lang }}
   {% endif %}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
-      {% assign langs = post.langs | split: ' ' %}
-      {% if langs contains page.lang %}
+      {% assign tokens = post.langs | split: ' ' %}
+      {% if tokens contains page.lang %}
         {% include archive-single.html type=page.entries_layout %}
       {% endif %}
     {% endfor %}

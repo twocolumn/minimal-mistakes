@@ -6,8 +6,8 @@ title: {{ page.eso }}
   {{ page.content }}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
-      {% assign esos = post.eso | split: ' ' %}
-      {% if esos contains page.eso %}
+      {% assign tokens = post.eso | split: ' ' %}
+      {% if tokens contains page.eso %}
         {% include archive-single.html type=page.entries_layout %}
       {% endif %}
     {% endfor %}

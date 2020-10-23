@@ -6,8 +6,8 @@ title: {{ page.project }}
   {{ page.content }}
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {% for post in site.posts %}
-      {% assign projects = post.projects | split: ' ' %}
-      {% if projects contains page.project %}
+      {% assign tokens = post.projects | split: ' ' %}
+      {% if tokens contains page.project %}
         {% include archive-single.html type=page.entries_layout %}
       {% endif %}
     {% endfor %}
