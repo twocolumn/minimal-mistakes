@@ -3,7 +3,7 @@
   {% assign tag_hashes = page_tags | split: ',' | sort %}
 
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-{{include.fa}}" aria-hidden="true"></i> {{ include.collection_label }} </strong>
+    <strong><i class="fa{{include.style}} fas fa-fw fa-{{include.fa}}" aria-hidden="true"></i> {{ include.collection_label }} </strong>
     <span itemprop="keywords">
     {% for hash in tag_hashes %}
       {% assign keyValue = hash | split: '|' %}
