@@ -5,10 +5,6 @@ toc_sticky: true
 sitemap: false
 ---
 
-{% if site.ad_sense %}
-  <script data-ad-client="{{site.ad_sense}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-{% endif %}
-
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include header/page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
