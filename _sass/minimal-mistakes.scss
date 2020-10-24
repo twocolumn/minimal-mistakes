@@ -1,3 +1,5 @@
+---
+---
 /*!
  * Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
  * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
@@ -42,7 +44,9 @@
 /* Custom */
 @import "minimal-mistakes/custom";
 
+{% if site.fontawesome.use == "sass" %}
 /* Font Awesome */
 @import "fontawesome/fontawesome";
 @import "fontawesome/solid";
 @import "fontawesome/brands";
+{% endif %}
