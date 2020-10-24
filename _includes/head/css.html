@@ -14,6 +14,7 @@
   {% when "sass" %}
     <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="font" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}" as="font" onload="this.onload=null;this.rel='stylesheet'">
 {% endcase %}
 <noscript>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
@@ -21,6 +22,7 @@
     {% when "sass" %}
       <link rel="stylesheet" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}">
       <link rel="stylesheet" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}">
   {% endcase %}
 </noscript>
 <script defer src="{{ '/assets/js/loadCss.js' }}"></script>
