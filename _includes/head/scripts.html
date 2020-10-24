@@ -27,7 +27,7 @@
 {% include /comments-providers/scripts.html %}
 
 {% if site.ad_sense.ad_sense_id %}
-  {% if site.ad_sense.all or page.comments == false  %}
+  {% if site.ad_sense.all or page.comments == false %}
     <script data-ad-client="{{site.ad_sense.ad_sense_id}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   {% endif %}
 {% endif %}
