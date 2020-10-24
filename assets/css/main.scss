@@ -6,3 +6,11 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+{% if site.fontawesome.use == "sass" %}
+/* Font Awesome */
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "fontawesome/regular";
+@import "fontawesome/brands";
+{% endif %}
