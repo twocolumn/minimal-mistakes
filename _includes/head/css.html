@@ -12,8 +12,8 @@
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 {% case site.fontawesome %}
   {% when "sass" %}
-    <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="font" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" onload="this.onload=null;this.rel='stylesheet'">
 {% endcase %}
 <noscript>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
