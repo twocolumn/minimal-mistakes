@@ -11,4 +11,6 @@
     {%- include js/disqus-empty.js -%}
 {% endcase %}
 
+{% include js/google_search_instant.js %}
+
 console.log("Loaded app.js");
