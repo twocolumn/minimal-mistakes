@@ -40,7 +40,7 @@
   (facebook, $facebook-color),
   (twitter, $twitter-color),
   (linkedin, $linkedin-color),
-  (tumblr, #001935),
+  (tumblr, color.scale(#001935, $lightness: 50%),
   (reddit, #ff4500);
 
   @each $buttoncolor, $color in $buttoncolors {
