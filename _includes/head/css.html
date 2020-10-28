@@ -16,10 +16,10 @@
       <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin >
     {% endif %}
     {% if site.fontawesome.regular %}
-      <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     {% endif %}
     {% if site.fontawesome.brands %}
-      <link rel="preload" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     {% endif %}
 {% endcase %}
 <noscript>
@@ -30,10 +30,10 @@
         <link rel="stylesheet" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}">
       {% endif %}
       {% if site.fontawesome.regular %}
-        <link rel="stylesheet" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}">
-      {% endif %}
-      {% if site.fontawesome.regular %}
         <link rel="stylesheet" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}">
+      {% endif %}
+      {% if site.fontawesome.brands %}
+        <link rel="stylesheet" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}">
       {% endif %}
   {% endcase %}
 </noscript>
