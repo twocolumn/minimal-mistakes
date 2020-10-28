@@ -10,7 +10,14 @@
 {% if site.fontawesome.use == "sass" %}
 /* Font Awesome */
 @import "fontawesome/fontawesome";
+{% if site.fontawesome.solid %}
 @import "fontawesome/solid";
+{% endif %}
+{% if site.fontawesome.regular %}
+{% endif %}
 @import "fontawesome/regular";
+{% endif %}
+{% if site.fontawesome.brands %}
 @import "fontawesome/brands";
+{% endif %}
 {% endif %}
