@@ -55,7 +55,7 @@ var lunr = function (config) {
 }
 
 lunr.version = "2.3.5"
-/*!
+/*
  * lunr.utils
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -175,7 +175,7 @@ lunr.FieldRef.prototype.toString = function () {
 
   return this._stringValue
 }
-/*!
+/*
  * lunr.Set
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -387,7 +387,7 @@ lunr.Token.prototype.clone = function (fn) {
   fn = fn || function (s) { return s }
   return new lunr.Token (fn(this.str, this.metadata), this.metadata)
 }
-/*!
+/*
  * lunr.tokenizer
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -463,7 +463,7 @@ lunr.tokenizer = function (obj, metadata) {
  * @see lunr.tokenizer
  */
 lunr.tokenizer.separator = /[\s\-]+/
-/*!
+/*
  * lunr.Pipeline
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -730,7 +730,7 @@ lunr.Pipeline.prototype.toJSON = function () {
     return fn.label
   })
 }
-/*!
+/*
  * lunr.Vector
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -927,7 +927,7 @@ lunr.Vector.prototype.toJSON = function () {
   return this.elements
 }
 /* eslint-disable */
-/*!
+/*
  * lunr.stemmer
  * Copyright (C) 2018 Oliver Nightingale
  * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
@@ -1149,7 +1149,7 @@ lunr.stemmer = (function(){
 })();
 
 lunr.Pipeline.registerFunction(lunr.stemmer, 'stemmer')
-/*!
+/*
  * lunr.stopWordFilter
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -1314,7 +1314,7 @@ lunr.stopWordFilter = lunr.generateStopWordFilter([
 ])
 
 lunr.Pipeline.registerFunction(lunr.stopWordFilter, 'stopWordFilter')
-/*!
+/*
  * lunr.trimmer
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -1341,7 +1341,7 @@ lunr.trimmer = function (token) {
 }
 
 lunr.Pipeline.registerFunction(lunr.trimmer, 'trimmer')
-/*!
+/*
  * lunr.TokenSet
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -1834,7 +1834,7 @@ lunr.TokenSet.Builder.prototype.minimize = function (downTo) {
     this.uncheckedNodes.pop()
   }
 }
-/*!
+/*
  * lunr.Index
  * Copyright (C) 2018 Oliver Nightingale
  */
@@ -2326,7 +2326,7 @@ lunr.Index.load = function (serializedIndex) {
 
   return new lunr.Index(attrs)
 }
-/*!
+/*
  * lunr.Builder
  * Copyright (C) 2018 Oliver Nightingale
  */
