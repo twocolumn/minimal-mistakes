@@ -14,7 +14,6 @@
 @import "fontawesome/solid";
 {% endif %}
 {% if site.fontawesome.regular %}
-{% endif %}
 @import "fontawesome/regular";
 {% endif %}
 {% if site.fontawesome.brands %}
