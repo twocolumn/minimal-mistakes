@@ -12,9 +12,15 @@
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 {% case site.fontawesome.use %}
   {% when "sass" %}
-    <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin >
-    <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    {% if site.fontawesome.solid %}
+      <link rel="preload" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin >
+    {% endif %}
+    {% if site.fontawesome.regular %}
+      <link rel="preload" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    {% endif %}
+    {% if site.fontawesome.brands %}
+      <link rel="preload" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    {% endif %}
 {% endcase %}
 <noscript>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
