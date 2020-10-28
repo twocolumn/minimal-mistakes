@@ -26,9 +26,15 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% case site.fontawesome.use %}
     {% when "sass" %}
-      <link rel="stylesheet" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}">
-      <link rel="stylesheet" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}">
-      <link rel="stylesheet" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}">
+      {% if site.fontawesome.solid %}
+        <link rel="stylesheet" href="{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}">
+      {% endif %}
+      {% if site.fontawesome.regular %}
+        <link rel="stylesheet" href="{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}">
+      {% endif %}
+      {% if site.fontawesome.regular %}
+        <link rel="stylesheet" href="{{ '/assets/webfonts/fa-regular-400.woff2' | relative_url }}">
+      {% endif %}
   {% endcase %}
 </noscript>
 <script defer src="{{ '/assets/js/loadCss.js' }}"></script>
