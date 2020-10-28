@@ -1,5 +1,5 @@
 /*jshint browser:true */
-/*!
+/*
 * FitVids 1.1
 *
 * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com

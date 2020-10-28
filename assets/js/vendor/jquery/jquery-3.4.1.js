@@ -1,4 +1,4 @@
-/*!
+/*
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
  *
@@ -510,7 +510,7 @@ function isArrayLike( obj ) {
 		typeof length === "number" && length > 0 && ( length - 1 ) in obj;
 }
 var Sizzle =
-/*!
+/*
  * Sizzle CSS Selector Engine v2.3.4
  * https://sizzlejs.com/
  *

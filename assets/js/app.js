@@ -1,4 +1,5 @@
 ---
+layout: compress
 ---
 {% include js/target-blank.js %}
 
@@ -10,6 +11,8 @@
   {% when "disqus_empty" %}
     {%- include js/disqus-empty.js -%}
 {% endcase %}
+
+{% include js/google_search_instant.js %}
 
 {% include js/google_search_instant.js %}
 

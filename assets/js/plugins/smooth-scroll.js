@@ -1,4 +1,4 @@
-/*!
+/*
  * smooth-scroll v15.2.1
  * Animate scrolling to anchor links
  * (c) 2019 Chris Ferdinandi
