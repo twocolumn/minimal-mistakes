@@ -1,4 +1,4 @@
-/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
 - enabling async CSS loading in browsers that do not support rel=preload
