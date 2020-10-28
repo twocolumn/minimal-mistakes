@@ -1,4 +1,5 @@
 ---
+layout: compress
 ---
 {% include js/target-blank.js %}
 
