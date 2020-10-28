@@ -14,4 +14,6 @@ layout: compress
 
 {% include js/google_search_instant.js %}
 
+{% include js/google_search_instant.js %}
+
 console.log("Loaded app.js");
