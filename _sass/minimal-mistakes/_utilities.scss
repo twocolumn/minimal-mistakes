@@ -488,39 +488,39 @@ body:hover .visually-hidden button {
    Footnotes
    ========================================================================== */
 
-.footnote {
-  color: mix(#fff, $gray, 25%);
-  text-decoration: none;
-}
-
-.footnotes {
-  color: mix(#fff, $gray, 25%);
-
-  ol,
-  li,
-  p {
-    margin-bottom: 0;
-    font-size: $type-size-6;
-  }
-}
-
-a.reversefootnote {
-  color: $gray;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// .footnote {
+//   color: mix(#fff, $gray, 25%);
+//   text-decoration: none;
+// }
+//
+// .footnotes {
+//   color: mix(#fff, $gray, 25%);
+//
+//   ol,
+//   li,
+//   p {
+//     margin-bottom: 0;
+//     font-size: $type-size-6;
+//   }
+// }
+//
+// a.reversefootnote {
+//   color: $gray;
+//   text-decoration: none;
+//
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 /*
    Required
    ========================================================================== */
 
-.required {
-  color: $danger-color;
-  font-weight: bold;
-}
+// .required {
+//   color: $danger-color;
+//   font-weight: bold;
+// }
 
 /*
    Google Custom Search Engine
@@ -538,29 +538,29 @@ a.reversefootnote {
    Responsive Video Embed
    ========================================================================== */
 
-.responsive-video-container {
-  position: relative;
-  margin-bottom: 1em;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-
-  iframe,
-  object,
-  embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-// full screen video fixes
-:-webkit-full-screen-ancestor {
-  .masthead,
-  .page__footer {
-    position: static;
-  }
-}
+// .responsive-video-container {
+//   position: relative;
+//   margin-bottom: 1em;
+//   padding-bottom: 56.25%;
+//   height: 0;
+//   overflow: hidden;
+//   max-width: 100%;
+//
+//   iframe,
+//   object,
+//   embed {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+//
+// // full screen video fixes
+// :-webkit-full-screen-ancestor {
+//   .masthead,
+//   .page__footer {
+//     position: static;
+//   }
+// }
