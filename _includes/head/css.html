@@ -6,9 +6,11 @@
   {{ critical | scssify }}
 </style>
 {% endcomment %}
+{% if site.critical_css %}
 <style>
   {% include head/critical.css %}
 </style>
+{% endif %}
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 {% case site.fontawesome.use %}
   {% when "sass" %}
