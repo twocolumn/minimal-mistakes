@@ -5,10 +5,10 @@
 <style>
   {{ critical | scssify }}
 </style>
+{% endcomment %}
 <style>
   {% include head/critical.css %}
 </style>
-{% endcomment %}
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 {% case site.fontawesome.use %}
   {% when "sass" %}
