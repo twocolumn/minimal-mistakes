@@ -1,13 +1,11 @@
 ---
 layout: compress
 ---
-{% include js/target-blank.js %}
-
-{% include js/cookie-consent.js %}
-
+{% comment %}
 {% if site.google.search_instant %}
   {% include js/google_search_instant.js %}
 {% endif %}
+{% endcomment %}
 
 {% case site.comments.provider %}
   {% when "disqus_loader" %}
