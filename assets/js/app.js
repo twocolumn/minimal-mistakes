@@ -10,7 +10,7 @@ layout: compress
 {% case site.comments.provider %}
   {% when "disqus_loader" %}
     {%- include js/disqus-click.js -%}
-  {% when "disqus_empty" %}
+  {% when "disqus_scroll" %}
     {%- include js/disqus-scroll.js -%}
 {% endcase %}
 
