@@ -19,13 +19,13 @@
       {% assign subset = subset | append: '-subset' %}
     {% endif %}
     {% if site.fontawesome.solid %}
-      <link rel="preload" href="{{ '/fa-solid-900.woff2' | prepend subset | relative_url }}" as="font" type="font/woff2" crossorigin >
+      <link rel="preload" href="{{ '/fa-solid-900.woff2' | prepend: subset | relative_url }}" as="font" type="font/woff2" crossorigin >
     {% endif %}
     {% if site.fontawesome.regular %}
-      <link rel="preload" href="{{ '/fa-regular-400.woff2' | prepend subset  | relative_url }}" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="{{ '/fa-regular-400.woff2' | prepend: subset  | relative_url }}" as="font" type="font/woff2" crossorigin>
     {% endif %}
     {% if site.fontawesome.brands %}
-      <link rel="preload" href="{{ '/fa-brands-400.woff2' | prepend subset  | relative_url }}" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="{{ '/fa-brands-400.woff2' | prepend: subset  | relative_url }}" as="font" type="font/woff2" crossorigin>
     {% endif %}
 {% endcase %}
 <noscript>
