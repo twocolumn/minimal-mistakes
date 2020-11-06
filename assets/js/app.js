@@ -11,9 +11,9 @@ layout: compress
 
 {% case site.comments.provider %}
   {% when "disqus_loader" %}
-    {%- include js/disqus-loader.js -%}
+    {%- include js/disqus-click.js -%}
   {% when "disqus_empty" %}
-    {%- include js/disqus-empty.js -%}
+    {%- include js/disqus-scroll.js -%}
 {% endcase %}
 
 console.log("Loaded app.js");
