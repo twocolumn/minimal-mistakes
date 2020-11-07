@@ -10,8 +10,29 @@
 ```bash
 npm install uglify-js
 npm run uglify-js
+npm run uglify-js-slim
 ```
 
 ```bash
 npm install --save-dev fontawesome-subset 
+```
+
+npm install grunt-cli
+npm install --save-dev grunt 
+npm install --save-dev grunt-contrib-concat 
+npm install --save-dev fontawesome-subset 
+npm install --save-dev @fortawesome/fontawesome-free
+grunt export-icons
+
+
+
+npm install  --save-dev grunt-critical
+
+* Wczytać config zaszyty w htmlu
+* Wczytać jquery + i cookies 
+* Wczytać resztę po kliknięciu lub innym evencie lub gdy cookiesy są zaakceptowane
+
+```bash
+npm run uglify-js-primary
+npm run uglify-js-secondary
 ```
