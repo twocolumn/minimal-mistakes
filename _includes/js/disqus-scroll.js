@@ -7,7 +7,7 @@ $(document).scroll(function(e) {
 
     if ($disqus_thread[0].getBoundingClientRect().top - 150 < $window.scrollTop()) {
       const po = document.createElement('script');
-      po.src = '//{{site.comments.disqus.shortname}}/embed.js';
+      po.src = '//{{site.comments.disqus.shortname}}.disqus.com/embed.js';
       $('script').before(po);
       $disqus_empty.remove();
       console.log('Load discus.');
