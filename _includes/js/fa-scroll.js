@@ -8,7 +8,7 @@ $(document).scroll(function(e) {
       const s = document.createElement('script');
       s.src = '/assets/js/fontawesome/all.slim.min.js';
       $('script')[0].before(s);
-      $disqus_empty.remove();
+      FA = null;
       console.log('Load fa.');
     }
   }
