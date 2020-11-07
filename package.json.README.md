@@ -10,8 +10,20 @@
 ```bash
 npm install uglify-js
 npm run uglify-js
+npm run uglify-js-slim
 ```
 
 ```bash
 npm install --save-dev fontawesome-subset 
 ```
+
+npm install grunt-cli
+npm install --save-dev grunt 
+npm install --save-dev grunt-contrib-concat 
+npm install --save-dev fontawesome-subset 
+npm install --save-dev @fortawesome/fontawesome-free
+grunt export-icons
+
+
+
+npm install  --save-dev grunt-critical
