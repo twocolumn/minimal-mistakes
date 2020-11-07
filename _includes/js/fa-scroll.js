@@ -1,6 +1,6 @@
 $(document).scroll(function(e) {
 
-  if (FA === undefined) {
+  if (FA == undefined) {
     const $window = $(window);
     const $page__share = $('.page__share')[0];
 
