@@ -1,8 +1,4 @@
-/* ==========================================================================
-   jQuery plugin settings and other scripts
-   ========================================================================== */
-
-$(document).ready(function() {
+function initiate() {
   // Sticky sidebar
   var stickySideBar = function() {
     var show =
@@ -90,4 +86,15 @@ $(document).ready(function() {
       $(this).append(anchor);
     }
   });
+
+  $('a[href$=".pdf"]').attr('target', '_blank');
+
+  console.log("Initiated.");
+}
+
+$("body").one( "click mouseover scroll", function(event) {
+  if (typeof INITIATE === 'undefined') {
+    INITIATE = null;
+    initiate();
+  }
 });
