@@ -1,4 +1,7 @@
 function initiate() {
+  // FitVids init
+  $("#main").fitVids();
+
   // Sticky sidebar
   var stickySideBar = function() {
     var show =
