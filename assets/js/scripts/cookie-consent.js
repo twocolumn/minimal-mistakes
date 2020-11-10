@@ -32,7 +32,7 @@ $(function() {
   function loadAdditionalScript() {
     if (typeof INITIATE === 'undefined') {
       INITIATE = null;
-      loadScript('/assets/js/secondary.js');
+      loadScript('/assets/js/secondary.min.js');
     }
   }
 
