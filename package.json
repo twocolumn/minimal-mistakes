@@ -39,7 +39,7 @@
     "uglify-js-slim-scroll": "uglifyjs assets/js/vendor/jquery/jquery-3.5.1.slim.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/smooth-scroll.js assets/js/plugins/gumshoe.js assets/js/_main.slim.js _includes/js/target-blank.js _includes/js/cookie-consent.js _includes/js/google_search_instant.js _includes/js/fa-scroll.js -c -m -o assets/js/main.slim.scroll.min.js",
     "uglify-js-slim-scroll-only": "uglifyjs assets/js/vendor/jquery/jquery-3.5.1.slim.js assets/js/plugins/smooth-scroll.js assets/js/plugins/gumshoe.js assets/js/_main.slim.js _includes/js/target-blank.js _includes/js/cookie-consent.js _includes/js/google_search_instant.js _includes/js/fa-scroll.js -c -m -o assets/js/main.slim.scroll-only.min.js",
     "uglify-js-fa": "uglifyjs assets/js/fontawesome/all.js -c -m -o assets/js/fontawesome/all.slim.min.js",
-    "uglify-js-primary": "uglifyjs assets/js/vendor/jquery/jquery-3.5.1.slim.js assets/js/scripts/load-script.js assets/js/scripts/cookie-consent.js -c -m -o assets/js/primary.min.js",
+    "uglify-js-primary": "uglifyjs assets/js/plugins/loadCSS.js assets/js/vendor/jquery/jquery-3.5.1.slim.js assets/js/scripts/load-script.js assets/js/scripts/cookie-consent.js -c -m -o assets/js/primary.min.js",
     "uglify-js-secondary": "uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/smooth-scroll.js assets/js/plugins/gumshoe.js assets/js/scripts/ready.js assets/js/fontawesome/all.js -c -m -o assets/js/secondary.min.js",
     "add-banner": "node banner.js",
     "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
