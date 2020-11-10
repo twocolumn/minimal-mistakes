@@ -27,3 +27,7 @@ grunt export-icons
 
 
 npm install  --save-dev grunt-critical
+
+* Wczytać config zaszyty w htmlu
+* Wczytać jquery + i cookies 
+* Wczytać resztę po kliknięciu lub innym evencie lub gdy cookiesy są zaakceptowane
