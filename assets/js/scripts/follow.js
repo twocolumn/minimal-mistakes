@@ -104,13 +104,13 @@
   function googleCustomSearchExecute() {
     const $input = $('cse-search-input-box-id');
     const element = google.search.cse.element.getElement('searchresults-only0');
-    $input.value == '' ? element.clearAllResults() : element.execute($input.value);
+    '' == $input.value ? element.clearAllResults() : element.execute($input.value);
     return false;
   }
 
   const search = isTrue(CONF.search);
   const search_provider = CONF.search_provider;
-  if (search && search_provider != null) {
+  if (search_provider != null) {
     switch (search_provider) {
       case "google": {
         loadScript('https://cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
