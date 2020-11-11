@@ -25,14 +25,11 @@ $(function() {
   function eraseCookie(name) {
     createCookie(name,"",-1);
   }
-  function isTrue(value) {
-    return value == 'true'
-  }
 
   function loadAdditionalScript() {
     if (typeof INITIATE === 'undefined') {
       INITIATE = null;
-      loadScript('/assets/js/secondary.min.js');
+      loadScript('/assets/js/follow.min.js');
     }
   }
 
@@ -55,5 +52,5 @@ $(function() {
   $("body").one( "click mouseover scroll", function(event) {
     loadAdditionalScript()
   });
-  console.log("Load primary")
+  console.log("Loaded first")
 });

@@ -1,4 +1,46 @@
-$(function() {
+//  $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'your stylesheet url') );
+//  $('<link>')
+//    .appendTo('head')
+//    .attr({
+//        type: 'text/css',
+//        rel: 'stylesheet',
+//        href: '/assets/css/follow.css'
+//    });
+
+  loadScript('//kit.fontawesome.com/4eee35f757.js');
+
+  const comments = isTrue(CONF.comments);
+  const comments_provider = CONF.comments_provider;
+  if (comments && comments_provider != null) {
+    switch (comments_provider) {
+      case 'disqus-follow': loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
+      break;
+    }
+  }
+
+  function googleCustomSearchExecute() {
+    const val = $('#cse-search-input-box-id').val();
+    const element = google.search.cse.element.getElement('searchresults-only0');
+    '' == val ? element.clearAllResults() : element.execute(val);
+    return false;
+  }
+
+  const search_provider = CONF.search_provider;
+  if (search_provider != null) {
+    switch (search_provider) {
+      case 'google': {
+        loadScript('//cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
+        $('input#cse-search-input-box-id').on('keyup', function () {
+          googleCustomSearchExecute();
+        });
+      }
+      break;
+    }
+  }
+
+  // FitVids init
+  $("#main").fitVids();
+
   // Sticky sidebar
   var stickySideBar = function() {
     var show =
@@ -87,7 +129,9 @@ $(function() {
     }
   });
 
+  const baseurl = CONF.baseurl;
+  $('a[href^="http://"]').not('a[href*="' + baseurl + '"]').attr('target','_blank');
+  $('a[href^="https://"]').not('a[href*="' + baseurl + '"]').attr('target','_blank');
   $('a[href$=".pdf"]').attr('target', '_blank');
 
-  console.log("Load secondary.");
-});
+  console.log("Loaded follow");
