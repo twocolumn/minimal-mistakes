@@ -92,6 +92,8 @@
   $('a[href^="https://"]').not('a[href*="' + baseurl + '"]').attr('target','_blank');
   $('a[href$=".pdf"]').attr('target', '_blank');
 
+  loadScript('//kit.fontawesome.com/4eee35f757.js');
+
   const comments = isTrue(CONF.comments);
   const comments_provider = CONF.comments_provider;
   if (comments && comments_provider != null) {
@@ -108,12 +110,11 @@
     return false;
   }
 
-  const search = isTrue(CONF.search);
   const search_provider = CONF.search_provider;
   if (search_provider != null) {
     switch (search_provider) {
       case 'google': {
-        loadScript('https://cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
+        loadScript('//cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
         $('input#cse-search-input-box-id').on('keyup', function () {
           googleCustomSearchExecute();
         });
