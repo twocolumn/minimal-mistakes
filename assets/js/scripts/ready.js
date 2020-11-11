@@ -89,5 +89,5 @@ $(function() {
 
   $('a[href$=".pdf"]').attr('target', '_blank');
 
-  console.log("Load secondary.");
+  console.log("Load follow.");
 });

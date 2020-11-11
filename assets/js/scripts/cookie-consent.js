@@ -32,7 +32,7 @@ $(function() {
   function loadAdditionalScript() {
     if (typeof INITIATE === 'undefined') {
       INITIATE = null;
-      loadScript('/assets/js/secondary.min.js');
+      loadScript('/assets/js/follow.min.js');
     }
   }
 
@@ -55,5 +55,5 @@ $(function() {
   $("body").one( "click mouseover scroll", function(event) {
     loadAdditionalScript()
   });
-  console.log("Load primary")
+  console.log("Load first")
 });
