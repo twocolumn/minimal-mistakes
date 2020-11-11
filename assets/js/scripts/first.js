@@ -52,5 +52,5 @@ $(function() {
   $("body").one( "click mouseover scroll", function(event) {
     loadAdditionalScript()
   });
-  console.log("Load first")
+  console.log("Loaded first")
 });

@@ -94,12 +94,11 @@ $(function() {
 
   const comments = isTrue(CONF.comments);
   const provider = CONF.comments_provider;
-  console.log("comments " + comments);
   if (comments && provider != null) {
     switch (provider) {
-      case "disqus_scroll": loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
+      case "disqus-follow": loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
       break;
     }
   }
-  console.log("Load follow");
+  console.log("Loaded follow");
 });
