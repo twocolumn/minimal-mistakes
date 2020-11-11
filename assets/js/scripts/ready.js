@@ -89,5 +89,8 @@ $(function() {
 
   $('a[href$=".pdf"]').attr('target', '_blank');
 
+  const comments = isTrue(CONF.comments) && isTrue(CONF.comments_provider);
+  console.log("comments " + comments);
+  loadScript('/assets/js/follow.min.js');
   console.log("Load follow.");
 });
