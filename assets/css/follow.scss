@@ -5,18 +5,18 @@
 @charset "utf-8";
 
 /* Variables */
-// @import "minimal-mistakes/variables";
+@import "minimal-mistakes/variables";
 
 /* Mixins and functions */
-// @import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
 // @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
 // @import "minimal-mistakes/vendor/susy/susy";
-// @import "minimal-mistakes/mixins";
+@import "minimal-mistakes/mixins";
 
 /* Core CSS */
 @import "minimal-mistakes/reset";
-// @import "minimal-mistakes/base";
+@import "minimal-mistakes/base";
 @import "minimal-mistakes/forms";
 @import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
