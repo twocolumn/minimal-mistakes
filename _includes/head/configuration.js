@@ -1,7 +1,8 @@
 CONF = {
   baseurl:"{{site.baseurl}}",
-  comments_provider:"{{site.comments.provider}}",
   comments:"{{page.comments}}",
+  comments_provider:"{{site.comments.provider}}",
+  comments_disqus_shortname:"{{site.comments.disqus.shortname}}",
   search_provider:"{{site.search_provider}}",
   google_search_instant:"{{site.google.search_instant}}"
 };
