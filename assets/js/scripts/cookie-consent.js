@@ -25,9 +25,6 @@ $(function() {
   function eraseCookie(name) {
     createCookie(name,"",-1);
   }
-  function isTrue(value) {
-    return value == 'true'
-  }
 
   function loadAdditionalScript() {
     if (typeof INITIATE === 'undefined') {

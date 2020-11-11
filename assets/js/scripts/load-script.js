@@ -1,3 +1,7 @@
+  function isTrue(value) {
+    return value == 'true'
+  }
+
   function loadScript(src) {
     const script = document.createElement('script');
     script.src = src;

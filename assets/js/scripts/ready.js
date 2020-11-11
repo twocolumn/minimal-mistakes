@@ -97,18 +97,7 @@ $(function() {
   console.log("comments " + comments);
   if (comments && provider != null) {
     switch (provider) {
-      case "disqus_scroll":
-        const $disqus_empty = $('#disqus_empty');
-
-        if ($disqus_empty.length) {
-          const $window = $(window);
-          const $disqus_thread = $('#disqus_thread');
-
-          if ($disqus_thread[0].getBoundingClientRect().top - 150 < $window.scrollTop()) {
-            loadScript(CONF.baseurl + '.disqus.com/embed.js');
-            $disqus_empty.remove();
-          }
-        }
+      case "disqus_scroll": loadScript(CONF.baseurl + '.disqus.com/embed.js');
       break;
     }
   }
