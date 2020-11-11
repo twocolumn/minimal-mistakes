@@ -112,7 +112,7 @@
   const search_provider = CONF.search_provider;
   if (search_provider != null) {
     switch (search_provider) {
-      case "google": {
+      case 'google': {
         loadScript('https://cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
         $('input#cse-search-input-box-id').on('keyup', function () {
           googleCustomSearchExecute();
