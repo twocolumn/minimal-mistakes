@@ -29,10 +29,19 @@ $(function() {
     return value == 'true'
   }
 
+  function loadScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    $('script')[0].before(script);
+    console.log("Load " + src);
+  }
+
   function loadAdditionalScript() {
     if (typeof INITIATE === 'undefined') {
       INITIATE = null;
       loadScript('/assets/js/follow.min.js');
+      const comments = isTrue(CONF.comments) && isTrue(CONF.comments_provider);
+      console.log("comments " + comments);
     }
   }
 
