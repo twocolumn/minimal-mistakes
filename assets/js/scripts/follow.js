@@ -96,7 +96,7 @@
   const comments_provider = CONF.comments_provider;
   if (comments && comments_provider != null) {
     switch (comments_provider) {
-      case "disqus-follow": loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
+      case 'disqus-follow': loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
       break;
     }
   }
