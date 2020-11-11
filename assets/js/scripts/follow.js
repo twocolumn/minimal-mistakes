@@ -98,7 +98,7 @@
     .attr({
         type: 'text/css',
         rel: 'stylesheet',
-        href: 'assets//css/follow.css'
+        href: 'assets/css/follow.css'
     });
 
   loadScript('//kit.fontawesome.com/4eee35f757.js');
