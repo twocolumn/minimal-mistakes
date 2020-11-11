@@ -1,4 +1,4 @@
-$(function() {
+
   // Sticky sidebar
   var stickySideBar = function() {
     var show =
@@ -93,12 +93,33 @@ $(function() {
   $('a[href$=".pdf"]').attr('target', '_blank');
 
   const comments = isTrue(CONF.comments);
-  const provider = CONF.comments_provider;
-  if (comments && provider != null) {
-    switch (provider) {
+  const comments_provider = CONF.comments_provider;
+  if (comments && comments_provider != null) {
+    switch (comments_provider) {
       case "disqus-follow": loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
       break;
     }
   }
+
+  function googleCustomSearchExecute() {
+    const $input = $('cse-search-input-box-id');
+    const element =google.search.cse.element.getElement('searchresults-only0');
+    $input.value == '' ? element.clearAllResults() : element.execute(input.value);
+    return false;
+  }
+
+  const search = isTrue(CONF.search);
+  const search_provider = CONF.search_provider;
+  if (search && search_provider != null) {
+    switch (search_provider) {
+      case "google-follow": {
+        loadScript('https://cse.google.com/cse.js?cx=' + CONF.google_search_engine_id);
+        $('input#cse-search-input-box-id').on('keyup', function () {
+          googleCustomSearchExecute();
+        });
+      }
+      break;
+    }
+  }
+
   console.log("Loaded follow");
-});
