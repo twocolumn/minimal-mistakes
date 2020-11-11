@@ -103,8 +103,8 @@
 
   function googleCustomSearchExecute() {
     const $input = $('cse-search-input-box-id');
-    const element =google.search.cse.element.getElement('searchresults-only0');
-    $input.value == '' ? element.clearAllResults() : element.execute(input.value);
+    const element = google.search.cse.element.getElement('searchresults-only0');
+    $input.value == '' ? element.clearAllResults() : element.execute($input.value);
     return false;
   }
 
