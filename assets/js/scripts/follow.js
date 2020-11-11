@@ -92,6 +92,15 @@
   $('a[href^="https://"]').not('a[href*="' + baseurl + '"]').attr('target','_blank');
   $('a[href$=".pdf"]').attr('target', '_blank');
 
+//  $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'your stylesheet url') );
+  $('<link>')
+    .appendTo('head')
+    .attr({
+        type: 'text/css',
+        rel: 'stylesheet',
+        href: 'assets//css/follow.css'
+    });
+
   loadScript('//kit.fontawesome.com/4eee35f757.js');
 
   const comments = isTrue(CONF.comments);
