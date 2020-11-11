@@ -97,9 +97,9 @@ $(function() {
   console.log("comments " + comments);
   if (comments && provider != null) {
     switch (provider) {
-      case "disqus_scroll": loadScript('//' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
+      case "disqus_scroll": loadScript('https://' + CONF.comments_disqus_shortname + '.disqus.com/embed.js');
       break;
     }
   }
-  console.log("Load follow.");
+  console.log("Load follow");
 });
