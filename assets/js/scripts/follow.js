@@ -102,9 +102,9 @@
   }
 
   function googleCustomSearchExecute() {
-    const $input = $('cse-search-input-box-id');
+    const val = $('#cse-search-input-box-id').val();
     const element = google.search.cse.element.getElement('searchresults-only0');
-    '' == $input.value ? element.clearAllResults() : element.execute($input.value);
+    '' == val ? element.clearAllResults() : element.execute(val);
     return false;
   }
 
