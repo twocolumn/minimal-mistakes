@@ -9,6 +9,11 @@
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="disqus_thread">
       </section>
+    {% when "disqus-follow" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="disqus_thread">
+        <div id="disqus_empty"></div>
+      </section>
     {% when "disqus_loader" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="disqus_thread">
