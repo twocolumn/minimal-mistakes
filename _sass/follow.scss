@@ -16,7 +16,7 @@
 
 /* Core CSS */
 @import "minimal-mistakes/reset";
-@import "minimal-mistakes/base";
+// @import "minimal-mistakes/base";
 @import "minimal-mistakes/forms";
 @import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
@@ -24,8 +24,8 @@
 /* Components */
 @import "minimal-mistakes/buttons";
 @import "minimal-mistakes/notices";
-@import "minimal-mistakes/masthead";
-@import "minimal-mistakes/navigation";
+// @import "minimal-mistakes/masthead";
+// @import "minimal-mistakes/navigation";
 @import "minimal-mistakes/footer";
 @import "minimal-mistakes/search";
 @import "minimal-mistakes/syntax";
@@ -34,10 +34,10 @@
 @import "minimal-mistakes/utilities";
 
 /* Layout specific */
-@import "minimal-mistakes/page";
-@import "minimal-mistakes/archive";
-@import "minimal-mistakes/sidebar";
+// @import "minimal-mistakes/page";
+// @import "minimal-mistakes/archive";
+// @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
 /* Custom */
-@import "minimal-mistakes/custom";
+// @import "minimal-mistakes/custom";
