@@ -14,7 +14,7 @@
     {% assign posts = group_items[forloop.index0] %}
       {% if posts.size == i %}
         <li>
-          <a href="{{ name | slugify | prepend : include.field | relative_url }}">
+          <a href="{{ name | slugify | prepend: '/' | prepend : include.field | relative_url }}">
             <strong>{{ name }}</strong> <span class="taxonomy__count">{{ i }}</span>
           </a>
         </li>
