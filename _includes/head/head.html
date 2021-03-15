@@ -1,5 +1,16 @@
 <meta charset="utf-8">
 
+{% if site.web_vitals %}
+<!-- Load `web-vitals` using a module script. -->
+<script type="module">
+  import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals@0.2.4/dist/web-vitals.es5.min.js?module';
+
+  getCLS(console.log);
+  getFID(console.log);
+  getLCP(console.log);
+</script>
+{% endif %}
+
 {% include head/analytics.html %}
 
 {% include head/seo.html %}
@@ -14,5 +25,9 @@
 </script>
 
 {% include head/css.html %}
+
+<script>
+{% include head/configuration.js %}
+</script>
 
 {% include head/scripts.html %}

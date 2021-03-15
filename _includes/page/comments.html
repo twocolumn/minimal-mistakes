@@ -9,15 +9,20 @@
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="disqus_thread">
       </section>
-    {% when "disqus_loader" %}
+    {% when "disqus-follow" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="disqus_thread">
-        <button id="disqus_loader">{{ comments_title }}</button>
+        <div id="disqus_empty"></div>
       </section>
     {% when "disqus_scroll" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="disqus_thread">
         <div id="disqus_empty"></div>
+      </section>
+    {% when "disqus_loader" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <section id="disqus_thread">
+        <button id="disqus_loader">{{ comments_title }}</button>
       </section>
     {% when "facebook" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
